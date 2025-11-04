@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive rating component</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="main.js"></script>
+  </head>
+  <body>
+    <main class="rating">
+      <section class="rating-card rating-card--active">
+        <header class="rating-card__header">
+          <div class="rating-card__star">
+            <img
+              src="./images/icon-star.svg"
+              width="17"
+              height="16"
+              alt="Star icon"
+            />
+          </div>
+        </header>
+
+        <div class="rating-card__content">
+          <h1 class="rating-card__title">How did we do?</h1>
+          <p class="rating-card__text">
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+
+          <div class="rating-card__ratings">
+            <button class="rating-card__rate-button" aria-label="Rate 1 out of 5">1</button>
+            <button class="rating-card__rate-button">2</button>
+            <button class="rating-card__rate-button">3</button>
+            <button class="rating-card__rate-button">4</button>
+            <button class="rating-card__rate-button">5</button>
+          </div>
+
+          <button class="rating-card__submit" aria-label="Submit rating">Submit</button>
+        </div>
+      </section>
+
+      <section class="rating-card rating-card--thank-you hidden">
+        <div class="rating-card__image">
+          <img
+            src="./images/illustration-thank-you.svg"
+            alt="Thank you illustration"
+            width="162"
+            height="108"
+          />
+        </div>
+
+        <p class="rating-card__selected">You selected 4 out of 5</p>
+
+        <h2 class="rating-card__thank-title">Thank you!</h2>
+
+        <p class="rating-card__text rating-card__text--thank">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
