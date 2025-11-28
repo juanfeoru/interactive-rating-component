@@ -1,23 +1,27 @@
-const activeCard = document.querySelector(".rating-card--active");
-const btn = document.querySelector(".rating-card__submit");
-const thankYouCard = document.querySelector(".rating-card--thank-you");
+const buttons = document.querySelectorAll(".rate-button");
+const submit = document.querySelector(".submit-button");
+const activeCard = document.querySelector(".active-card");
+const thankYouCard = document.querySelector(".card-thank-you");
+const selected = document.querySelector(".selected");
+let rating;
 
-const ratingButton = document.querySelectorAll(".rating-card__ratings .rating-card__rate-button");
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    buttons.forEach((b) => b.classList.remove("bg-[var(--orange-500)]"));
+    buttons.forEach((b) => b.classList.remove("text-[var(--grey-900)]"));
 
-
-btn.addEventListener("click", () => {
-     activeCard.classList.add("hidden");
-     thankYouCard.classList.remove("hidden");
+    button.classList.add("bg-[var(--orange-500)]");
+    button.classList.add("text-[var(--grey-900)]");
+    rating = button.textContent;
+  });
 });
 
-ratingButton.forEach((boton) => {
-    boton.addEventListener("click", () => {
+submit.addEventListener("click", () => {
+  activeCard.classList.add("hidden");
+  thankYouCard.classList.remove("hidden");
 
-        ratingButton.forEach((b) => {
-            b.classList.remove("active");
-        });
-
-        boton.classList.add("active");
-    });
+  if (rating === undefined) {
+    rating = 0;
+  }
+  selected.textContent = `You selected ${rating} out of 5`;
 });
-
