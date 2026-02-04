@@ -1,121 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/public/favicon-32x32.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frontend Mentor | Interactive rating component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
 
-    <title>Frontend Mentor | Interactive rating component</title>
+<body class="p-6 bg-grey-950">
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  </head>
-
-  <body class="font-[overpass] bg-[var(--grey-950)] p-6">
-    <main class="flex justify-center items-center min-h-screen">
-      <!-- RATING CARD -->
-      <section
-        class="active-card bg-[var(--grey-900)] rounded-2xl p-6 flex flex-col m-4 max-w-80 shadow-md h-96"
-      >
-        <header>
-          <!-- RATING CARD STAR -->
-          <div
-            class="inline-block items-center justify-center p-2 mb-4 bg-[var(--grey-500)]/10 rounded-full"
-          >
-            <img
-              src="./images/icon-star.svg"
-              width="17"
-              height="16"
-              alt="Star icon"
-            />
-          </div>
-        </header>
-
-        <div class="flex flex-col gap-6">
-          <h1 class="text-[var(--white)] text-2xl font-bold">How did we do?</h1>
-          <p class="text-[var(--grey-500)] text-sm">
-            Please let us know how we did with your support request. All
-            feedback is appreciated to help us improve our offering!
-          </p>
-
-          <!-- RATING CARD RATINGS -->
-          <div class="flex justify-between">
-            <button
-              class="rate-button rounded-full bg-[var(--grey-500)]/10 text-[var(--grey-500)] w-10 h-10 font-bold cursor-pointer hover:bg-[var(--white)] hover:text-[var(--grey-950)]"
-              aria-label="Rate 1 out of 5"
-            >
-              1
-            </button>
-            <button
-              class="rate-button rounded-full bg-[var(--grey-500)]/10 text-[var(--grey-500)] w-10 h-10 font-bold cursor-pointer hover:bg-[var(--white)] hover:text-[var(--grey-950)]"
-            >
-              2
-            </button>
-            <button
-              class="rate-button rounded-full bg-[var(--grey-500)]/10 text-[var(--grey-500)] w-10 h-10 font-bold cursor-pointer hover:bg-[var(--white)] hover:text-[var(--grey-950)]"
-            >
-              3
-            </button>
-            <button
-              class="rate-button rounded-full bg-[var(--grey-500)]/10 text-[var(--grey-500)] w-10 h-10 font-bold cursor-pointer hover:bg-[var(--white)] hover:text-[var(--grey-950)]"
-            >
-              4
-            </button>
-            <button
-              class="rate-button rounded-full bg-[var(--grey-500)]/10 text-[var(--grey-500)] w-10 h-10 font-bold cursor-pointer hover:bg-[var(--white)] hover:text-[var(--grey-950)]"
-            >
-              5
-            </button>
-          </div>
-
-          <!-- RATING CARD SUBMIT -->
-          <button
-            class="submit-button bg-[var(--orange-500)] uppercase py-2 w-full font-bold tracking-[1px] rounded-full cursor-pointer hover:bg-[var(--white)]"
-            aria-label="Submit rating"
-          >
-            Submit
-          </button>
-        </div>
-      </section>
-
-      <!-- THANK YOU CARD -->
-      <section
-        class="card-thank-you bg-[var(--grey-900)] rounded-2xl p-6 flex flex-col max-w-80 shadow-md items-center justify-center gap-6 h-96 hidden"
-      >
-        <div>
-          <img
-            src="./images/illustration-thank-you.svg"
-            alt="Thank you illustration"
-            width="162"
-            height="108"
-          />
-        </div>
-
-        <p
-          class="selected bg-[var(--grey-500)]/10 text-[var(--orange-500)]/60 py-2 px-3 rounded-full text-sm"
-        ></p>
-
-        <h2 class="text-2xl font-bold text-[var(--white)]">Thank you!</h2>
-
-        <p class="text-[var(--grey-500)] text-sm text-center">
-          We appreciate you taking the time to give a rating. If you ever need
-          more support, don’t hesitate to get in touch!
-        </p>
-      </section>
-    </main>
-  </body>
 </html>
